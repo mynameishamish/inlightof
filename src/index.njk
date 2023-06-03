@@ -1,0 +1,13 @@
+---
+layout: layouts/base.njk
+title: Home
+---
+<h1> This is the {{title}} Page. </h1>
+
+{% for report in collections.reports %}
+<div class="project-card">
+    <h3>{{report.data.title}}</h3>
+    <p>{{report.data.description}}</p>
+    <a href="{{report.url}}" class="cta-btn">Read more</a>
+</div>
+{% endfor %}
